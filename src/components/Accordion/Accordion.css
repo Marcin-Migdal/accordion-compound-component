@@ -1,0 +1,42 @@
+.accordion-wrapper {
+    width: 300px;
+    border: 2px solid lavenderblush;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.accordion-button {
+    padding: 5px;
+    transition: 0.2s;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.accordion-wrapper.expanded .accordion-button {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.accordion-button:hover {
+    background-color: #777;
+}
+
+.accordion-panel {
+    overflow-y: auto;
+}
+
+.accordion-wrapper.collapsed .accordion-panel {
+    height: 0px;
+    transition: 0.35s;
+    text-overflow: clip;
+    padding: 0 5px;
+}
+
+.accordion-wrapper.expanded .accordion-panel {
+    height: 100px;
+    transition: 0.35s;
+    padding: 5px;
+}
