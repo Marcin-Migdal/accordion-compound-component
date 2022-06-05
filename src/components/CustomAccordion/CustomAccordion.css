@@ -1,0 +1,39 @@
+.accordion-textarea {
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+    padding: 5px;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+}
+
+.accordion-wrapper-item.expanded .custom-accordion-expanded {
+    height: 110px !important;
+}
+
+.accordion-textarea:hover {
+    background-color: #666;
+}
+
+.accordion-textarea:focus {
+    background-color: #555;
+}
+
+.custom-accordion-expanded {
+    padding: 0 0 !important;
+    overflow: hidden !important;
+}
+
+.indicator-icon {
+    transition: 0.25s;
+    margin-right: 5px;
+}
+
+.accordion-wrapper-item.expanded .indicator-icon {
+    transform: rotateX(180deg);
+}

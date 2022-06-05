@@ -22,7 +22,7 @@ export const AccordionItemWrapper = ({ children, itemKey, className }: IAccordio
     });
 
     return (
-        <div className={`accordion-wrapper ${activeItemKey === itemKey ? "expanded" : "collapsed"} ${className}`}>
+        <div className={`accordion-wrapper-item ${activeItemKey === itemKey ? "expanded" : "collapsed"} ${className}`}>
             {accordionItemChildren}
         </div>
     );
@@ -36,12 +36,12 @@ export const AccordionTitle = ({ itemKey, children, className = "" }: IAccordion
     }, [toggleOpenItem, itemKey]);
 
     return (
-        <div onClick={accordionButtonClickHandler} className={`accordion-button ${className}`}>
+        <div onClick={accordionButtonClickHandler} className={`accordion-title ${className}`}>
             {children}
         </div>
     );
 };
 
 export const AccordionExpanded = ({ children, className = "" }: IAccordionChildrenProps) => {
-    return <div className={`accordion-panel ${className}`}>{children}</div>;
+    return <div className={`accordion-expanded ${className}`}>{children}</div>;
 };

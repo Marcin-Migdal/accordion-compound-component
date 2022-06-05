@@ -1,4 +1,4 @@
-.accordion-wrapper {
+.accordion-wrapper-item {
     width: 300px;
     border: 2px solid lavenderblush;
     border-radius: 6px;
@@ -6,7 +6,7 @@
     color: white;
 }
 
-.accordion-button {
+.accordion-title {
     padding: 5px;
     transition: 0.2s;
     border-top-right-radius: 6px;
@@ -15,27 +15,27 @@
     border-bottom-left-radius: 6px;
 }
 
-.accordion-wrapper.expanded .accordion-button {
+.accordion-title:hover {
+    background-color: #777;
+}
+
+.accordion-wrapper-item.expanded .accordion-title {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 }
 
-.accordion-button:hover {
-    background-color: #777;
-}
-
-.accordion-panel {
+.accordion-expanded {
     overflow-y: auto;
+    text-overflow: clip; 
 }
 
-.accordion-wrapper.collapsed .accordion-panel {
+.accordion-wrapper-item.collapsed .accordion-expanded {
     height: 0px;
     transition: 0.35s;
-    text-overflow: clip;
     padding: 0 5px;
 }
 
-.accordion-wrapper.expanded .accordion-panel {
+.accordion-wrapper-item.expanded .accordion-expanded {
     height: 100px;
     transition: 0.35s;
     padding: 5px;
