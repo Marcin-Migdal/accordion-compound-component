@@ -1,17 +1,17 @@
-import React, { useCallback } from "react";
+import React from "react";
 
+import { IAccordionItemWrapperProps, IAccordionItemWrapperChildrenProps, IAccordionProps, ItemKeyType } from "./interfaces";
 import { AccordionContextProvider, useAccordionContext } from "./AccordionContext";
-import { IAccordionChildrenProps, IAccordionProps } from "./interfaces";
 
 import "./Accordion.css";
 
-export const Accordion = ({ children, className = "" }: IAccordionProps) => (
-    <AccordionContextProvider>
+export const Accordion = ({ children, autoClose = false, className = "" }: IAccordionProps) => (
+    <AccordionContextProvider autoClose={autoClose}>
         <div className={`accordion ${className}`}>{children}</div>
     </AccordionContextProvider>
 );
 
-export const AccordionItemWrapper = ({ children, itemKey, className }: IAccordionChildrenProps) => {
+export const AccordionItemWrapper = ({ children, itemKey, className = "" }: IAccordionItemWrapperProps) => {
     const { activeItemKey } = useAccordionContext();
 
     const childrenArray = React.Children.toArray(children);
@@ -21,27 +21,24 @@ export const AccordionItemWrapper = ({ children, itemKey, className }: IAccordio
         else return null;
     });
 
-    return (
-        <div className={`accordion-wrapper-item ${activeItemKey === itemKey ? "expanded" : "collapsed"} ${className}`}>
-            {accordionItemChildren}
-        </div>
-    );
+    return <div className={`accordion-wrapper-item ${activeItemKey?.[itemKey] || "closed"} ${className}`}>{accordionItemChildren}</div>;
 };
 
-export const AccordionTitle = ({ itemKey, children, className = "" }: IAccordionChildrenProps) => {
+export const AccordionTitle = ({ itemKey, children, className = "" }: IAccordionItemWrapperChildrenProps) => {
+    const _itemKey = itemKey as ItemKeyType; // itemKey at this point can't be undefined, thats why i have to set is forcefully to ItemKeyType
     const { toggleOpenItem } = useAccordionContext();
 
-    const accordionButtonClickHandler = useCallback(() => {
-        toggleOpenItem(itemKey);
-    }, [toggleOpenItem, itemKey]);
-
     return (
-        <div onClick={accordionButtonClickHandler} className={`accordion-title ${className}`}>
+        <div onClick={() => toggleOpenItem(_itemKey)} className={`accordion-title ${className}`}>
             {children}
         </div>
     );
 };
 
-export const AccordionExpanded = ({ children, className = "" }: IAccordionChildrenProps) => {
+export const AccordionExpanded = ({ itemKey, children, className = "" }: IAccordionItemWrapperChildrenProps) => {
+    const _itemKey = itemKey as ItemKeyType; // itemKey at this point can't be undefined, thats why i have to set is forcefully to ItemKeyType
+    const { activeItemKey } = useAccordionContext();
+
+    if ((activeItemKey?.[_itemKey] || "closed") === "closed") return <></>;
     return <div className={`accordion-expanded ${className}`}>{children}</div>;
 };

@@ -13,15 +13,37 @@
     top: 40%;
 }
 
-.col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0.5rem;
+.example-container {
+    margin: 0.5rem;
 }
 
-.col h3 {
+.col { 
+    display: flex; 
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 300px;
+}
+
+.example-container h3 {
+    width: fit-content;
+    text-align: center;
     color: white;
+}
+
+.example-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.example-header input {
+    width: 60px;
+    height: 35px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    outline: none;
+    border: none;
 }
 
 .no-select {

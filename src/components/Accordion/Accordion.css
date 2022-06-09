@@ -1,5 +1,8 @@
+.accordion {
+    width: calc(100% - 10px);
+}
 .accordion-wrapper-item {
-    width: 300px;
+    width: 100%;
     border: 2px solid lavenderblush;
     border-radius: 6px;
     margin-bottom: 5px;
@@ -7,6 +10,7 @@
 }
 
 .accordion-title {
+    height: 20px;
     padding: 5px;
     transition: 0.2s;
     border-top-right-radius: 6px;
@@ -19,24 +23,30 @@
     background-color: #777;
 }
 
-.accordion-wrapper-item.expanded .accordion-title {
+.accordion-wrapper-item.opened .accordion-title {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 }
 
 .accordion-expanded {
-    overflow-y: auto;
-    text-overflow: clip; 
+    text-overflow: clip;
+    transition: 0.35s;
+    overflow-y: hidden;
 }
 
-.accordion-wrapper-item.collapsed .accordion-expanded {
+.accordion-wrapper-item.closed-visible .accordion-expanded,
+.accordion-wrapper-item.closing .accordion-expanded,
+.accordion-wrapper-item.closed .accordion-expanded {
     height: 0px;
-    transition: 0.35s;
     padding: 0 5px;
 }
 
-.accordion-wrapper-item.expanded .accordion-expanded {
+.accordion-wrapper-item.opening .accordion-expanded,
+.accordion-wrapper-item.opened .accordion-expanded {
     height: 100px;
-    transition: 0.35s;
     padding: 5px;
+}
+
+.accordion-wrapper-item.opened .accordion-expanded {
+    overflow-y: auto !important;
 }
