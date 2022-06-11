@@ -1,21 +1,18 @@
 import React from "react";
 
-import { CustomAccordion } from "./components/CustomAccordion/CustomAccordion";
-import { SimpleAccordion } from "./components/SimpleAccordion/SimpleAccordion";
-import { dataSet } from "./utils/dataSet";
+import { SideMenuAccordion } from "./components/examples/SideMenuAccordion/SideMenuAccordion";
+import { CustomAccordion } from "./components/examples/CustomAccordion/CustomAccordion";
+import { SimpleAccordion } from "./components/examples/SimpleAccordion/SimpleAccordion";
 
 import "./App.css";
-
-// TODO! Add right click accordion example
 
 const App = () => {
     return (
         <div className="App">
             <div className="row">
-                <SimpleAccordion dataSet={dataSet} />
+                <SimpleAccordion />
                 <CustomAccordion />
-                {/*  <h3>Right click accordion</h3>
-                <SimpleAccordion dataSet={dataSet} /> */}
+                <SideMenuAccordion />
             </div>
         </div>
     );

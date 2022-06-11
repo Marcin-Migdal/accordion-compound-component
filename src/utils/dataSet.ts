@@ -18,29 +18,12 @@ export const dataSet: IDataSet[] = [
         title: "Title 5",
         detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec orci sed lacus bibendum sagittis. Quisque fringilla vulputate consectetur. Nulla facilisi. Aenean interdum ligula sed quam interdum consectetur. Duis egestas erat ac turpis ornare, sed faucibus magna eleifend. Donec semper imperdiet nisi ac ultrices. Praesent sagittis nulla at sapien egestas auctor. Nunc lectus nibh, rhoncus at ipsum ac, dapibus tincidunt odio. ",
     },
-    // {
-    //     id: 6,
-    //     title: "Title 6",
-    //     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec orci sed lacus bibendum sagittis. Quisque fringilla vulputate consectetur. Nulla facilisi. Aenean interdum ligula sed quam interdum consectetur. Duis egestas erat ac turpis ornare, sed faucibus magna eleifend. Donec semper imperdiet nisi ac ultrices. Praesent sagittis nulla at sapien egestas auctor. Nunc lectus nibh, rhoncus at ipsum ac, dapibus tincidunt odio. ",
-    // },
-    // {
-    //     id: 7,
-    //     title: "Title 7",
-    //     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec orci sed lacus bibendum sagittis. Quisque fringilla vulputate consectetur. Nulla facilisi. Aenean interdum ligula sed quam interdum consectetur. Duis egestas erat ac turpis ornare, sed faucibus magna eleifend. Donec semper imperdiet nisi ac ultrices. Praesent sagittis nulla at sapien egestas auctor. Nunc lectus nibh, rhoncus at ipsum ac, dapibus tincidunt odio. ",
-    // },
-    // {
-    //     id: 8,
-    //     title: "Title 8",
-    //     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec orci sed lacus bibendum sagittis. Quisque fringilla vulputate consectetur. Nulla facilisi. Aenean interdum ligula sed quam interdum consectetur. Duis egestas erat ac turpis ornare, sed faucibus magna eleifend. Donec semper imperdiet nisi ac ultrices. Praesent sagittis nulla at sapien egestas auctor. Nunc lectus nibh, rhoncus at ipsum ac, dapibus tincidunt odio. ",
-    // },
-    // {
-    //     id: 9,
-    //     title: "Title 9",
-    //     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec orci sed lacus bibendum sagittis. Quisque fringilla vulputate consectetur. Nulla facilisi. Aenean interdum ligula sed quam interdum consectetur. Duis egestas erat ac turpis ornare, sed faucibus magna eleifend. Donec semper imperdiet nisi ac ultrices. Praesent sagittis nulla at sapien egestas auctor. Nunc lectus nibh, rhoncus at ipsum ac, dapibus tincidunt odio. ",
-    // },
-    // {
-    //     id: 10,
-    //     title: "Title 10",
-    //     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec orci sed lacus bibendum sagittis. Quisque fringilla vulputate consectetur. Nulla facilisi. Aenean interdum ligula sed quam interdum consectetur. Duis egestas erat ac turpis ornare, sed faucibus magna eleifend. Donec semper imperdiet nisi ac ultrices. Praesent sagittis nulla at sapien egestas auctor. Nunc lectus nibh, rhoncus at ipsum ac, dapibus tincidunt odio. ",
-    // },
+];
+
+export const userDataSet: IDataSet[] = [
+    { id: 1, title: "Charlene Bauer" },
+    { id: 2, title: "Lorraine Hall" },
+    { id: 3, title: "Cathy Palacios" },
+    { id: 4, title: "Eliot Moran" },
+    { id: 5, title: "Tate Rollins" },
 ];

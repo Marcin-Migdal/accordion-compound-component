@@ -22,7 +22,7 @@
     height: 500px;
     overflow-y: auto;
     overflow-x: hidden;
-    width: 300px;
+    width: 250px;
 }
 
 .example-container h3 {
@@ -35,15 +35,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-.example-header input {
-    width: 60px;
-    height: 35px;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    outline: none;
-    border: none;
 }
 
 .no-select {

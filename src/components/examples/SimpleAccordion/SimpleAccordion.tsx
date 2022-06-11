@@ -1,8 +1,9 @@
-import { Accordion, AccordionTitle, AccordionItemWrapper, AccordionExpanded } from "../Accordion/Accordion";
-import { IDataSet } from "../../utils/interfaces";
+import { Accordion, AccordionTitle, AccordionItemWrapper, AccordionExpanded } from "../../Accordion/Accordion";
+import { IDataSet } from "../../../utils/interfaces";
+import { dataSet } from "../../../utils/dataSet";
 
 // Example "simple accordion"
-export const SimpleAccordion = ({ dataSet }: { dataSet: IDataSet[] }) => (
+export const SimpleAccordion = () => (
     <div className="example-container">
         <div className="example-header">
             <h3>Simple accordion</h3>

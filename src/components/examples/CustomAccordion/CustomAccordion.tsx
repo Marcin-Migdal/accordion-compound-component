@@ -1,9 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FocusEvent, useEffect, useState } from "react";
+import { FaAngleUp } from "react-icons/fa";
 
-import { Accordion, AccordionExpanded, AccordionItemWrapper, AccordionTitle } from "../Accordion/Accordion";
-import { IDataSet } from "../../utils/interfaces";
+import { Accordion, AccordionExpanded, AccordionItemWrapper, AccordionTitle } from "../../Accordion/Accordion";
+import { IDataSet } from "../../../utils/interfaces";
 
 import "./CustomAccordion.css";
 
@@ -47,8 +46,8 @@ export const CustomAccordion = () => {
                 <Accordion autoClose>
                     {customDataSet.map((item) => (
                         <AccordionItemWrapper key={item.id} itemKey={item.id}>
-                            <AccordionTitle className="custom-accordion-title no-select">
-                                <FontAwesomeIcon className="indicator-icon" icon={faAngleUp} />
+                            <AccordionTitle className="no-select">
+                                <FaAngleUp className="indicator-icon" />
                                 {item.title}
                             </AccordionTitle>
                             <AccordionExpanded className="custom-accordion-expanded">
