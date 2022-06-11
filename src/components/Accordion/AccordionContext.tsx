@@ -20,7 +20,7 @@ export const AccordionContextProvider = ({ children, autoClose }: { children: Re
         setTimeout(() => {
             setState();
             setDisabledToggle(false);
-        }, 350);
+        }, 340);
 
     const toggleOpenItem = (itemKey: ItemKeyType) => {
         if (disabledToggle) return;
@@ -41,7 +41,7 @@ export const AccordionContextProvider = ({ children, autoClose }: { children: Re
                 });
             } else {
                 setActiveItemKey({ ...activeItemKey, [itemKey]: statuses.closedVisible });
-                setTimeout(() => setActiveItemKey({ ...activeItemKey, [itemKey]: statuses.opening }), 0);
+                setTimeout(() => setActiveItemKey({ ...activeItemKey, [itemKey]: statuses.opening }), 10);
                 handleTimeOut(() => setActiveItemKey({ ...activeItemKey, [itemKey]: statuses.opened }));
             }
         } else {
@@ -64,7 +64,7 @@ export const AccordionContextProvider = ({ children, autoClose }: { children: Re
                 setTimeout(() => {
                     if (!!prevActiveItemKey) setActiveItemKey({ [itemKey]: statuses.opening, [prevActiveItemKey]: statuses.closing });
                     else setActiveItemKey({ [itemKey]: statuses.opening });
-                }, 0);
+                }, 10);
                 handleTimeOut(() => setActiveItemKey({ [itemKey]: statuses.opened }));
             }
         }

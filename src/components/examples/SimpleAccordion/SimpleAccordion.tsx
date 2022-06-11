@@ -1,5 +1,4 @@
-import { Accordion, AccordionTitle, AccordionItemWrapper, AccordionExpanded } from "../../Accordion/Accordion";
-import { IDataSet } from "../../../utils/interfaces";
+import { Accordion, AccordionTitle, AccordionItemWrapper, AccordionExpanded } from "../../Accordion/Accordion"; 
 import { dataSet } from "../../../utils/dataSet";
 
 // Example "simple accordion"

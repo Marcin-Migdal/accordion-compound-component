@@ -6,7 +6,7 @@ export type OpenStatusType = "opening" | "opened" | "closing" | "closed" | "clos
 export type IStatuses = { [key in OpenStatusKeyType]: OpenStatusType };
 
 export type ItemKeyType = number | string;
-export interface ActiveItemKey {
+interface ActiveItemKey {
     [key: ItemKeyType]: OpenStatusType;
 }
 
@@ -22,7 +22,10 @@ export interface IAccordionItemWrapperProps extends IAccordionItemBaseProps {
     itemKey: ItemKeyType;
 }
 export interface IAccordionItemWrapperChildrenProps extends IAccordionItemBaseProps {
+    toggleOpenItem?: Function;
     itemKey?: ItemKeyType;
+    openStatus?: OpenStatusType;
+    disabledToggle?: boolean;
 }
 
 interface IAccordionItemBaseProps {

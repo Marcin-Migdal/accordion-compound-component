@@ -30,21 +30,23 @@
     border-radius: inherit;
     border: 2px solid white;
     overflow: hidden;
-    transition: 0.3s;
+    transition: 0.2s;
     top: -2px;
 }
 
-.custom-accordion-title.closed .side-menu {
+.accordion-wrapper-item.closed-visible .side-menu,
+.accordion-wrapper-item.closing .side-menu,
+.accordion-wrapper-item.closed .side-menu {
     left: -2px;
 }
 
-.custom-accordion-title.opened .side-menu {
+.accordion-wrapper-item.opening .side-menu,
+.accordion-wrapper-item.opened .side-menu {
     left: calc(100% + 5px);
 }
 
 .side-menu .icon-container {
-    flex: 1;
-    /* padding: 5px; */
+    flex: 1; 
     display: flex;
     align-items: center;
     justify-content: center;
