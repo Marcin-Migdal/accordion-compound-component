@@ -18,17 +18,17 @@ export interface IAccordionProps {
     autoClose?: boolean;
 }
 
-export interface IAccordionItemWrapperProps extends IAccordionItemBaseProps {
+export interface IItemWrapperProps extends IItemWrapperBaseProps {
     itemKey: ItemKeyType;
 }
-export interface IAccordionItemWrapperChildrenProps extends IAccordionItemBaseProps {
+export interface IItemWrapperChildrenProps extends IItemWrapperBaseProps {
     toggleOpenItem?: Function;
     itemKey?: ItemKeyType;
     openStatus?: OpenStatusType;
     disabledToggle?: boolean;
 }
 
-interface IAccordionItemBaseProps {
+interface IItemWrapperBaseProps {
     children: ReactNode | ReactNode[];
     className?: string;
 }

@@ -1,4 +1,7 @@
-.custom-accordion-title {
+.side-menu-item-wrapper {
+    border: 2px solid lavenderblush;
+    margin-bottom: 5px;
+    color: lavenderblush; 
     position: relative;
     height: 30px;
     z-index: 2;
@@ -6,7 +9,7 @@
     border-radius: 6px;
 }
 
-.custom-accordion-title-content {
+.side-menu-item-content {
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     padding: 5px;
@@ -17,11 +20,11 @@
     transition: 0.2s;
 }
 
-.custom-accordion-title-content:hover {
+.side-menu-item-content:hover {
     background-color: #777;
 }
 
-.side-menu {
+.side-menu-item-expanded-content {
     z-index: 1;
     position: absolute;
     display: flex;
@@ -34,39 +37,39 @@
     top: -2px;
 }
 
-.accordion-wrapper-item.closed-visible .side-menu,
-.accordion-wrapper-item.closing .side-menu,
-.accordion-wrapper-item.closed .side-menu {
+.side-menu-item-wrapper.closed-visible .side-menu-item-expanded-content,
+.side-menu-item-wrapper.closing .side-menu-item-expanded-content,
+.side-menu-item-wrapper.closed .side-menu-item-expanded-content {
     left: -2px;
 }
 
-.accordion-wrapper-item.opening .side-menu,
-.accordion-wrapper-item.opened .side-menu {
+.side-menu-item-wrapper.opening .side-menu-item-expanded-content,
+.side-menu-item-wrapper.opened .side-menu-item-expanded-content {
     left: calc(100% + 5px);
 }
 
-.side-menu .icon-container {
-    flex: 1; 
+.side-menu-item-expanded-content .icon-container {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.2s;
 }
 
-.side-menu .icon-container:hover {
+.side-menu-item-expanded-content .icon-container:hover {
     background-color: #777;
 }
 
-.side-menu .icon-container:active {
+.side-menu-item-expanded-content .icon-container:active {
     background-color: #999;
 }
 
-.side-menu .icon-container .icon {
+.side-menu-item-expanded-content .icon-container .icon {
     transition: 0.2s;
     width: 18px;
     height: 18px;
 }
 
-.side-menu .icon-container:active .icon {
+.side-menu-item-expanded-content .icon-container:active .icon {
     transform: scale(0.8);
 }

@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 
-import { ItemKeyType, IStatuses, ActiveItemKeyType } from "./interfaces";
+import { ItemKeyType, IStatuses, ActiveItemKeyType } from "../interfaces/interfaces";
 
 export const AccordionContext = createContext<any>(null);
 

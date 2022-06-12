@@ -1,7 +1,8 @@
 import { FocusEvent, useEffect, useState } from "react";
 import { FaAngleUp } from "react-icons/fa";
 
-import { Accordion, AccordionExpanded, AccordionItemWrapper, AccordionTitle } from "../../Accordion/Accordion";
+import { ItemWrapper, ItemExpandedContent, ItemContent } from "../../Accordion/ItemWrappers/ItemWrapper/ItemWrapper";
+import { Accordion } from "../../Accordion/Accordion";
 import { IDataSet } from "../../../utils/interfaces";
 
 import "./CustomAccordion.css";
@@ -45,15 +46,15 @@ export const CustomAccordion = () => {
             <div className="col">
                 <Accordion autoClose>
                     {customDataSet.map((item) => (
-                        <AccordionItemWrapper key={item.id} itemKey={item.id}>
-                            <AccordionTitle className="no-select">
+                        <ItemWrapper key={item.id} itemKey={item.id}>
+                            <ItemContent className="no-select">
                                 <FaAngleUp className="indicator-icon" />
                                 {item.title}
-                            </AccordionTitle>
-                            <AccordionExpanded className="custom-accordion-expanded">
+                            </ItemContent>
+                            <ItemExpandedContent className="custom-item-expanded-content">
                                 <ExpandedContent item={item} handleChange={handleChange} />
-                            </AccordionExpanded>
-                        </AccordionItemWrapper>
+                            </ItemExpandedContent>
+                        </ItemWrapper>
                     ))}
                 </Accordion>
             </div>

@@ -6,6 +6,17 @@ import { SimpleAccordion } from "./components/examples/SimpleAccordion/SimpleAcc
 
 import "./App.css";
 
+//! TODO
+//! 1) I need to clear interfaces after side menu example refactor
+//! 2) Next I need to make some nice home page for better viewing experience: 
+//!    - there will be a tab for each accordion example
+//!    - each accordion will have radio button that will enable or disabled autoclose
+//!    - There still will be only three/(maybe four) examples:
+//!        - Simple example 
+//!        - Custom example (textarea in expanded context)
+//!        - Side menu example
+//!        - example that will use dispatch for crude operation (not sure if i will make it in this project)
+
 const App = () => {
     return (
         <div className="App">

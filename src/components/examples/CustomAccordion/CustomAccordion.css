@@ -23,12 +23,12 @@
     overflow: hidden;
 }
 
-.accordion-wrapper-item.opened .accordion-textarea {
+.item-wrapper.opened .accordion-textarea {
     overflow: auto;
 }
 
-.accordion-wrapper-item.opening .custom-accordion-expanded,
-.accordion-wrapper-item.opened .custom-accordion-expanded {
+.item-wrapper.opening .custom-item-expanded-content,
+.item-wrapper.opened .custom-item-expanded-content {
     height: 110px !important;
 }
 
@@ -40,7 +40,7 @@
     background-color: #555;
 }
 
-.custom-accordion-expanded {
+.custom-item-expanded-content {
     padding: 0 0 !important;
     overflow: hidden !important;
 }
@@ -50,7 +50,7 @@
     margin-right: 5px;
 }
 
-.accordion-wrapper-item.opening .indicator-icon,
-.accordion-wrapper-item.opened .indicator-icon {
+.item-wrapper.opening .indicator-icon,
+.item-wrapper.opened .indicator-icon {
     transform: rotateX(180deg);
 }

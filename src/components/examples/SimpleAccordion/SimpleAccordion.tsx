@@ -1,4 +1,5 @@
-import { Accordion, AccordionTitle, AccordionItemWrapper, AccordionExpanded } from "../../Accordion/Accordion"; 
+import { ItemWrapper, ItemExpandedContent, ItemContent } from "../../Accordion/ItemWrappers/ItemWrapper/ItemWrapper";
+import { Accordion } from "../../Accordion/Accordion";
 import { dataSet } from "../../../utils/dataSet";
 
 // Example "simple accordion"
@@ -10,10 +11,10 @@ export const SimpleAccordion = () => (
         <div className="col">
             <Accordion>
                 {dataSet.map((item) => (
-                    <AccordionItemWrapper key={item.id} itemKey={item.id}>
-                        <AccordionTitle className="no-select">{item.title}</AccordionTitle>
-                        <AccordionExpanded>{item.detail}</AccordionExpanded>
-                    </AccordionItemWrapper>
+                    <ItemWrapper key={item.id} itemKey={item.id}>
+                        <ItemContent className="no-select">{item.title}</ItemContent>
+                        <ItemExpandedContent>{item.detail}</ItemExpandedContent>
+                    </ItemWrapper>
                 ))}
             </Accordion>
         </div>
