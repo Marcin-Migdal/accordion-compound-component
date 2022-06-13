@@ -1,5 +1,4 @@
-
-.item-wrapper {
+.accordion.normal .item-wrapper {
     width: 100%;
     border: 2px solid lavenderblush;
     border-radius: 6px;
@@ -7,7 +6,7 @@
     color: lavenderblush;
 }
 
-.item-content {
+.accordion.normal .item-content {
     height: 20px;
     padding: 5px;
     transition: 0.2s;
@@ -17,34 +16,34 @@
     border-bottom-left-radius: 6px;
 }
 
-.item-content:hover {
+.accordion.normal .item-content:hover {
     background-color: #777;
 }
 
-.item-wrapper.opened .item-content {
+.accordion.normal .item-wrapper.opened .item-content {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 }
 
-.item-expanded-content {
+.accordion.normal .item-expanded-content {
     text-overflow: clip;
     transition: 0.35s;
     overflow-y: hidden;
 }
 
-.item-wrapper.closed-visible .item-expanded-content,
-.item-wrapper.closing .item-expanded-content,
-.item-wrapper.closed .item-expanded-content {
+.accordion.normal .item-wrapper.closed-visible .item-expanded-content,
+.accordion.normal .item-wrapper.closing .item-expanded-content,
+.accordion.normal .item-wrapper.closed .item-expanded-content {
     height: 0px;
     padding: 0 5px;
 }
 
-.item-wrapper.opening .item-expanded-content,
-.item-wrapper.opened .item-expanded-content {
+.accordion.normal .item-wrapper.opening .item-expanded-content,
+.accordion.normal .item-wrapper.opened .item-expanded-content {
     height: 100px;
     padding: 5px;
 }
 
-.item-wrapper.opened .item-expanded-content {
+.accordion.normal .item-wrapper.opened .item-expanded-content {
     overflow-y: auto !important;
 }

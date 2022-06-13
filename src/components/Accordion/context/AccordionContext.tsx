@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-import { ItemKeyType, IStatuses, ActiveItemKeyType } from "../interfaces/interfaces";
+import { ItemKeyType, IStatuses, ActiveItemKeyType, IContextProps } from "../interfaces/interfaces";
 
 export const AccordionContext = createContext<any>(null);
 
@@ -12,7 +12,7 @@ const statuses: IStatuses = {
     closing: "closing",
 };
 
-export const AccordionContextProvider = ({ children, autoClose }: { children: ReactNode; autoClose: boolean }) => {
+export const AccordionContextProvider = ({ children, autoClose }: IContextProps) => {
     const [activeItemKey, setActiveItemKey] = useState<ActiveItemKeyType>(undefined);
     const [disabledToggle, setDisabledToggle] = useState<boolean>(false);
 

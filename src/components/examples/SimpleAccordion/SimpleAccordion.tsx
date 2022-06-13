@@ -1,4 +1,4 @@
-import { ItemWrapper, ItemExpandedContent, ItemContent } from "../../Accordion/ItemWrappers/ItemWrapper/ItemWrapper";
+import { ItemWrapper, ItemExpandedContent, ItemContent } from "../../Accordion/ItemWrapper";
 import { Accordion } from "../../Accordion/Accordion";
 import { dataSet } from "../../../utils/dataSet";
 

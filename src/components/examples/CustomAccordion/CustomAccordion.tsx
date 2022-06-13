@@ -1,7 +1,7 @@
 import { FocusEvent, useEffect, useState } from "react";
 import { FaAngleUp } from "react-icons/fa";
 
-import { ItemWrapper, ItemExpandedContent, ItemContent } from "../../Accordion/ItemWrappers/ItemWrapper/ItemWrapper";
+import { ItemWrapper, ItemExpandedContent, ItemContent } from "../../Accordion/ItemWrapper";
 import { Accordion } from "../../Accordion/Accordion";
 import { IDataSet } from "../../../utils/interfaces";
 

@@ -1,10 +1,6 @@
 import { FaTwitter, FaFacebook, FaTwitch, FaGithub } from "react-icons/fa";
 
-import {
-    SideMenuItemExpandedContent,
-    SideMenuItemContent,
-    SideMenuItemWrapper,
-} from "../../Accordion/ItemWrappers/SideMenuItemWrapper/SideMenuItemWrapper";
+import { ItemContent, ItemExpandedContent, ItemWrapper } from "../../Accordion/ItemWrapper";
 import { Accordion } from "../../Accordion/Accordion";
 import { userDataSet } from "../../../utils/dataSet";
 
@@ -14,11 +10,11 @@ export const SideMenuAccordion = () => (
         <div className="example-header">
             <h3>Side menu accordion</h3>
         </div>
-        <Accordion>
+        <Accordion autoClose type="side-menu">
             {userDataSet.map((item) => (
-                <SideMenuItemWrapper key={item.id} itemKey={item.id}>
-                    <SideMenuItemContent> {item.title}</SideMenuItemContent>
-                    <SideMenuItemExpandedContent>
+                <ItemWrapper key={item.id} itemKey={item.id}>
+                    <ItemContent> {item.title}</ItemContent>
+                    <ItemExpandedContent>
                         <div className="icon-container">
                             <FaTwitter className="icon" />
                         </div>
@@ -31,8 +27,8 @@ export const SideMenuAccordion = () => (
                         <div className="icon-container">
                             <FaGithub className="icon" />
                         </div>
-                    </SideMenuItemExpandedContent>
-                </SideMenuItemWrapper>
+                    </ItemExpandedContent>
+                </ItemWrapper>
             ))}
         </Accordion>
     </div>

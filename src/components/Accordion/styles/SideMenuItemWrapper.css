@@ -1,4 +1,4 @@
-.side-menu-item-wrapper {
+.accordion.side-menu .item-wrapper {
     border: 2px solid lavenderblush;
     margin-bottom: 5px;
     color: lavenderblush; 
@@ -9,7 +9,7 @@
     border-radius: 6px;
 }
 
-.side-menu-item-content {
+.accordion.side-menu .item-content {
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     padding: 5px;
@@ -20,11 +20,11 @@
     transition: 0.2s;
 }
 
-.side-menu-item-content:hover {
+.accordion.side-menu .item-content:hover {
     background-color: #777;
 }
 
-.side-menu-item-expanded-content {
+.accordion.side-menu .item-expanded-content {
     z-index: 1;
     position: absolute;
     display: flex;
@@ -37,18 +37,18 @@
     top: -2px;
 }
 
-.side-menu-item-wrapper.closed-visible .side-menu-item-expanded-content,
-.side-menu-item-wrapper.closing .side-menu-item-expanded-content,
-.side-menu-item-wrapper.closed .side-menu-item-expanded-content {
+.accordion.side-menu .item-wrapper.closed-visible .item-expanded-content,
+.accordion.side-menu .item-wrapper.closing .item-expanded-content,
+.accordion.side-menu .item-wrapper.closed .item-expanded-content {
     left: -2px;
 }
 
-.side-menu-item-wrapper.opening .side-menu-item-expanded-content,
-.side-menu-item-wrapper.opened .side-menu-item-expanded-content {
+.accordion.side-menu .item-wrapper.opening .item-expanded-content,
+.accordion.side-menu .item-wrapper.opened .item-expanded-content {
     left: calc(100% + 5px);
 }
 
-.side-menu-item-expanded-content .icon-container {
+.accordion.side-menu .item-expanded-content .icon-container {
     flex: 1;
     display: flex;
     align-items: center;
@@ -56,20 +56,20 @@
     transition: 0.2s;
 }
 
-.side-menu-item-expanded-content .icon-container:hover {
+.accordion.side-menu .item-expanded-content .icon-container:hover {
     background-color: #777;
 }
 
-.side-menu-item-expanded-content .icon-container:active {
+.accordion.side-menu .item-expanded-content .icon-container:active {
     background-color: #999;
 }
 
-.side-menu-item-expanded-content .icon-container .icon {
+.accordion.side-menu .item-expanded-content .icon-container .icon {
     transition: 0.2s;
     width: 18px;
     height: 18px;
 }
 
-.side-menu-item-expanded-content .icon-container:active .icon {
+.accordion.side-menu .item-expanded-content .icon-container:active .icon {
     transform: scale(0.8);
 }
