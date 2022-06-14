@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# Accordion compound component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project, I wanted to create an accordion component using compound component pattern.
 
-## Available Scripts
+### To check it out:
 
-In the project directory, you can run:
+-   You just need to download zip package or clone this project in to your machine using `git clone https://github.com/Marcin-Migdal/accordion-compound-component.git` command.
+-   Go in to the project folder and use `npm i` command, it shouldn't take long, I didn't use any external library besides `react-icons`.
+-   When it finish installing use `npm start` command
 
-### `npm start`
+### Project consist of three examples:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   Simple accordion. This example just shows basic component functionality.
+-   Custom accordion. This example has textarea when it expands, It was simple to make thanks to compound component pattern features.
+    <br/>
+    This example also consist of an number input, which determines how many items there is in accordion. It was made to show that performance was also in my mind while creating this component.
+-   Side menu accordion. This example expandable content expands to the side, not downward. It is a build in component feature, NOT any additional logic possible thanks to compound component pattern features.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Accordion props:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   autoClose: `boolean`, when set to `true` it is possible to expand only one accordion item. Its default setting is `"false"`
+-   type: `"normal" | "side-menu`, when set to `"normal"` expandable content expand downwards, while when to set to `"side-menu"` expandable content expand to the right side of the accordion item. Its default setting is `"normal"`
