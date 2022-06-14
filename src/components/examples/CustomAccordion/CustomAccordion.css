@@ -1,0 +1,66 @@
+.example-header h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.example-header .input-container {
+    display: flex;
+    align-items: center;
+}
+
+.example-header input {
+    width: 70px;
+    height: 30px;
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+}
+
+.accordion-textarea {
+    width: calc(100% - 10px);
+    height: calc(100% - 14px);
+    padding: 5px;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    color: inherit;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.item-wrapper.opened .accordion-textarea {
+    overflow: auto;
+}
+
+.item-wrapper.opening .custom-item-expanded-content,
+.item-wrapper.opened .custom-item-expanded-content {
+    height: 110px !important;
+}
+
+.accordion-textarea:hover {
+    background-color: #666;
+}
+
+.accordion-textarea:focus {
+    background-color: #555;
+}
+
+.custom-item-expanded-content {
+    padding: 0 0 !important;
+    overflow: hidden !important;
+}
+
+.indicator-icon {
+    transition: 0.25s;
+    margin-right: 5px;
+}
+
+.item-wrapper.opening .indicator-icon,
+.item-wrapper.opened .indicator-icon {
+    transform: rotateX(180deg);
+}

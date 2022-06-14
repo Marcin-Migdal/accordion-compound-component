@@ -1,0 +1,45 @@
+.auto-close-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auto-close-input p {
+    width: 100px;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.indicator-track {
+    width: 50px;
+    height: 22px;
+    margin-top: 2px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: #666;
+    position: absolute;
+    top: calc(50% - 9px);
+    transition: 0.2s;
+}
+
+.indicator-track.off .indicator {
+    left: 2px;
+}
+
+.indicator-track.on .indicator {
+    left: calc(100% - 20px);
+}

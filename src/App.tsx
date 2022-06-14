@@ -1,23 +1,22 @@
-import React from "react";
-
-import { MyList } from "./components/MyList/MyList";
+import { SideMenuAccordion } from "./components/examples/SideMenuAccordion/SideMenuAccordion";
+import { CustomAccordion } from "./components/examples/CustomAccordion/CustomAccordion";
+import { SimpleAccordion } from "./components/examples/SimpleAccordion/SimpleAccordion";
+import { TabsComponent } from "./components/TabsComponent/TabsComponent";
 
 import "./App.css";
-
-interface IData {
-    id: number;
-    title: string;
-    context: string;
-}
-
-const dataSet: IData[] = [
-    { id: 1, title: "Title 1", context: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu bibendum mauris." },
-];
 
 const App = () => {
     return (
         <div className="App">
-            <MyList dataSet={dataSet} />
+            <div className="center-tabs">
+                <TabsComponent
+                    tabs={{
+                        Simple: <SimpleAccordion />,
+                        Custom: <CustomAccordion />,
+                        "Side menu": <SideMenuAccordion />,
+                    }}
+                />
+            </div>
         </div>
     );
 };
