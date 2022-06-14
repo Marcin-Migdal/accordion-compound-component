@@ -10,3 +10,9 @@ export interface ExpandedContent {
     item: IDataSet;
     handleChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 }
+
+export interface ITabsComponentProps {
+    tabs: {
+        [key: string]: any;
+    };
+}

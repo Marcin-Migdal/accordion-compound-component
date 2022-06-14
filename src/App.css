@@ -7,34 +7,40 @@
     position: relative;
 }
 
-.row {
+.center-tabs {
     display: flex;
     position: absolute;
     top: 40%;
-}
-
-.example-container {
-    margin: 0.5rem;
-}
-
-.col { 
-    display: flex; 
-    height: 500px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 250px;
-}
-
-.example-container h3 {
-    width: fit-content;
-    text-align: center;
-    color: white;
 }
 
 .example-header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 0.75rem;
+}
+
+.example-header.custom {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.example-header.side-menu {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+h3 {
+    width: fit-content;
+    text-align: center;
+    color: white;
+    margin-right: 15px;
+}
+
+.accordion-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .no-select {

@@ -6,11 +6,15 @@ import { Accordion } from "../../Accordion/Accordion";
 import { IDataSet } from "../../../utils/interfaces";
 
 import "./CustomAccordion.css";
+import { AutoCloseInput } from "../../AutoCloseInput/AutoCloseInput";
 
 // Example "custom accordion"
 export const CustomAccordion = () => {
     const [dataSetLength, setDataSetLength] = useState<number>(10);
     const [customDataSet, setCustomDataSet] = useState<IDataSet[]>([]);
+    const [autoCloseOn, setAutoCloseOn] = useState<boolean>(false);
+
+    const handleClick = () => setAutoCloseOn((prev) => !prev);
 
     const handleChange = (e: FocusEvent<HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -38,12 +42,15 @@ export const CustomAccordion = () => {
     }, [dataSetLength]);
 
     return (
-        <div className="example-container">
-            <div className="example-header">
-                <h3>Custom accordion</h3>
-                <input type="number" value={dataSetLength} onChange={(e) => setDataSetLength(parseInt(e.target.value))} />
+        <>
+            <div className="example-header custom">
+                <h3 className="no-select">Custom accordion</h3>
+                <div className="input-container">
+                    <input type="number" value={dataSetLength} onChange={(e) => setDataSetLength(parseInt(e.target.value))} />
+                    <AutoCloseInput value={autoCloseOn} onClick={handleClick} />
+                </div>
             </div>
-            <div className="col">
+            <div className="accordion-container">
                 <Accordion autoClose>
                     {customDataSet.map((item) => (
                         <ItemWrapper key={item.id} itemKey={item.id}>
@@ -58,7 +65,7 @@ export const CustomAccordion = () => {
                     ))}
                 </Accordion>
             </div>
-        </div>
+        </>
     );
 };
 
